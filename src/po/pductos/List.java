@@ -2,7 +2,7 @@ package po.pductos;
 
 import java.util.Scanner;
 
-public class List <T>{
+public class List <T> {
     public Elemento<T> pivote, inicio;
     int nelementos;
 

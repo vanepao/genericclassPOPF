@@ -1,7 +1,5 @@
 package po.pductos;
-
 import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -28,49 +26,56 @@ public class Main {
         System.out.println(ListaA.eliminar());
 
 
-//Buscar por clave de producto.
-        System.out.println("Looking for a product?" + "\n Type it here: ");
-        Scanner teclado = new Scanner(System.in);
-        String key = teclado.nextLine();
+//Buscar por clave de producto, hay 10 intentos.
 
-        if (ListaA.recorrer().contains(key)) {
-            if(key.equals(art1.getKeyproduct())){
-                System.out.print("The product you are lookig for is: " + art1.toString() + " \n");
-            } else if(key.equals((art2.getKeyproduct()))) {
-                System.out.print("The product you are lookig for is: " + art2.toString() + " \n");
-                } else  if (key.equals((art3.getKeyproduct()))) {
-                System.out.print("The product you are lookig for is: " + art3.toString() + " \n");
-            }else if (key.equals((art4.getKeyproduct()))) {
-                System.out.print("The product you are lookig for is: " + art4.toString() + " \n");
-            } else if((key.equals((art5.getKeyproduct())))){
-                System.out.print("The product you are lookig for is: " + art5.toString() + " \n");
-            } else
-                System.out.print("NOT FOUNDED \n");
-        }
+        for (int num = 0; num <= 9; num++) {
 
+            System.out.println("\n Looking for a product?" + "\n Type it here: ");
+            Scanner teclado = new Scanner(System.in);
+            String key = teclado.nextLine();
 
+            if (ListaA.recorrer().contains(key)) {
+                if (key.equals(art1.getKeyproduct())) {
+                    System.out.print("The product you are lookig for is: " + art1.toString() + " \n");
+                    num++;
+                } else if (key.equals((art2.getKeyproduct()))) {
+                    System.out.print("The product you are lookig for is: " + art2.toString() + " \n");
+                    num++;
+                } else if (key.equals((art3.getKeyproduct()))) {
+                    System.out.print("The product you are lookig for is: " + art3.toString() + " \n");
+                    num++;
+                } else if (key.equals((art4.getKeyproduct()))) {
+                    System.out.print("The product you are lookig for is: " + art4.toString() + " \n");
+                    num++;
+                } else if ((key.equals((art5.getKeyproduct())))) {
+                    System.out.print("The product you are lookig for is: " + art5.toString() + " \n");
+                    num++;
+                } }else
+                    System.out.print("NOT FOUNDED \n");
+            }
 
 
 //Método para buscar por clave, se empleo un array con los números de clave
-        String[] keys = {"23A015", "24A014", "25A013", "26A011", "27A010"};
-        String nombre = "";
-        boolean found = false;
-        System.out.println("Looking for a product?" + "\n Type it here: ");
-        nombre = teclado.nextLine();
+// String[] keys = {"23A015", "24A014", "25A013", "26A011", "27A010"};
+// String nombre = "";
+// boolean found = false;
+// System.out.println("Looking for a product?" + "\n Type it here: ");
+// nombre = teclado.nextLine();
 
-        //  while (found = true) {
-        for (String element : keys) {
-            if (element.equals(nombre)) {
-                found = true;
-                System.out.println("The product your looking for is: " + nombre);
-                System.out.println("Looking for other one? \n Type here: ");
-                nombre=teclado.nextLine();
-            } else System.out.println("The product " + nombre + " isn't in our database");
-            System.out.println("TRY AGAIN");
-            nombre=teclado.nextLine();
+            //  while (found = true) {
+            // for (String element : keys) {
+            // if (element.equals(nombre)) {
+            // found = true;
+            // System.out.println("The product your looking for is: " + nombre);
+            // System.out.println("Looking for other one? \n Type here: ");
+            // nombre=teclado.nextLine();
+            // } else System.out.println("The product " + nombre + " isn't in our database");
+            // System.out.println("TRY AGAIN");
+            // nombre=teclado.nextLine();
+            // }
         }
     }
-    }
+
 
 
 

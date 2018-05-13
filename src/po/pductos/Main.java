@@ -24,15 +24,38 @@ public class Main {
         ListaA.insertar(fifth);
 
 //Elimina el Artículo 1, en este caso "Milk"
+        System.out.println("Just 4 elements");
         System.out.println(ListaA.eliminar());
-    System.out.println(art1.getDescription());
+
+
+//Buscar por clave de producto.
+        System.out.println("Looking for a product?" + "\n Type it here: ");
+        Scanner teclado = new Scanner(System.in);
+        String key = teclado.nextLine();
+
+        if (ListaA.recorrer().contains(key)) {
+            if(key.equals(art1.getKeyproduct())){
+                System.out.print("The product you are lookig for is: " + art1.toString() + " \n");
+            } else if(key.equals((art2.getKeyproduct()))) {
+                System.out.print("The product you are lookig for is: " + art2.toString() + " \n");
+                } else  if (key.equals((art3.getKeyproduct()))) {
+                System.out.print("The product you are lookig for is: " + art3.toString() + " \n");
+            }else if (key.equals((art4.getKeyproduct()))) {
+                System.out.print("The product you are lookig for is: " + art4.toString() + " \n");
+            } else if((key.equals((art5.getKeyproduct())))){
+                System.out.print("The product you are lookig for is: " + art5.toString() + " \n");
+            } else
+                System.out.print("NOT FOUNDED \n");
+        }
+
+
+
 
 //Método para buscar por clave, se empleo un array con los números de clave
         String[] keys = {"23A015", "24A014", "25A013", "26A011", "27A010"};
         String nombre = "";
         boolean found = false;
         System.out.println("Looking for a product?" + "\n Type it here: ");
-        Scanner teclado = new Scanner(System.in);
         nombre = teclado.nextLine();
 
         //  while (found = true) {
@@ -46,8 +69,9 @@ public class Main {
             System.out.println("TRY AGAIN");
             nombre=teclado.nextLine();
         }
-
     }
-}
+    }
+
+
 
 

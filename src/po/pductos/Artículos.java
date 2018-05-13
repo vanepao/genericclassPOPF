@@ -25,7 +25,9 @@ public class Artículos {
     public String toString(){
         return "{" + "Keyproduct: " + keyproduct + " Brief description: " + description + " Price: " + price + " Expiration date: "+expiration + "} \n";
    }
-
+    public String getKeyproduct(){
+        return keyproduct;
+    }
     public void setKeyproduct(String keyproduct){
         this.keyproduct=keyproduct;
     }

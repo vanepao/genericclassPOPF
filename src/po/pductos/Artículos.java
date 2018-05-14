@@ -5,21 +5,22 @@ import java.util.Scanner;
 public class Artículos {
     private String keyproduct;
     private String description;
-    private String price;
+    private int price;
     private String expiration;
 
     public Artículos(){
         this.keyproduct="";
         this.description="";
-        this.price="";
+        this.price=0;
         this.expiration="";
     }
-    public Artículos(String k, String d, String p, String e){
+    public Artículos(String k, String d, int p, String e){
         this.keyproduct=k;
         this.description=d;
         this.price=p;
         this.expiration=e;
     }
+
 
    @Override
     public String toString(){
@@ -37,10 +38,10 @@ public class Artículos {
     public void setDescription(String description){
         this.description=description;
     }
-    public String getPrice(){
+    public int getPrice(){
         return price;
     }
-    public void setPrice(String price){
+    public void setPrice(int price){
         this.price=price;
     }
     public String getExpiration(){

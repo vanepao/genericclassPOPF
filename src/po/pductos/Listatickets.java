@@ -1,50 +1,36 @@
 package po.pductos;
 
-import java.util.Scanner;
-
-public class List <T> {
-    public Elemento<T> pivote, inicio;
-    public Tickets<T> pivote2, inicio2;
-
+public class Listatickets<T> {
+    public Tickets<T> pivote, inicio;
     int nelementos;
 
     //Constructor inicial
-    public List(){
+    public Listatickets(){
         inicio=pivote=null;
         nelementos=0;
     }
 
 
-    public List(Elemento<T> objeto){
+    public Listatickets(Tickets<T> objeto){
         inicio=pivote=objeto;
         nelementos=1;
     }
 
-    public void insertar(Elemento<T> objeto){
+    public void insertaren(Tickets<T> objeto){
         if(nelementos==0){
-        inicio=pivote=objeto;
+            inicio=pivote=objeto;
         } else{
             objeto.siguiente=inicio;
             inicio=pivote=objeto;
         }
         nelementos++;
     }
-    public void insertar(Tickets<T> objeto){
-        if(nelementos==0){
-            inicio2=pivote2=objeto;
-        } else{
-            objeto.siguiente=inicio2;
-            inicio2=pivote2=objeto;
-        }
-        nelementos++;
-    }
-
 
     public String recorrer(){
         String data = "";
         pivote=inicio;
         for(int i=0; i<nelementos; i++){
-            data += pivote.attrG.toString();
+            data += pivote.attrGr.toString();
             pivote=pivote.siguiente;
         }
         return data;
@@ -53,10 +39,11 @@ public class List <T> {
         String data="";
         pivote=inicio;
         for(int i=1;i<nelementos; i++){
-            data +=pivote.attrG.toString();
+            data +=pivote.attrGr.toString();
             pivote =pivote.siguiente;
         }
         return data;
     }
 
 }
+

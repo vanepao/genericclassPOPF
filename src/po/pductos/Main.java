@@ -9,6 +9,15 @@ public class Main {
         Artículos art4 = new Artículos("26A011", "Cream", 15, "24/02/19");
         Artículos art5 = new Artículos("27A010", "Ice-cream", 19, "30/04/19");
 
+        Artículos c1 = new Artículos(10);
+        Artículos c2= new Artículos(20);
+        Artículos c3= new Artículos(50);
+        Artículos c4= new Artículos(15);
+        Artículos c5= new Artículos(60);
+
+
+
+
         Elemento<Artículos> first = new Elemento<>(art1);
         Elemento<Artículos> second = new Elemento<>(art2);
         Elemento<Artículos> third = new Elemento<>(art3);
@@ -20,6 +29,9 @@ public class Main {
         ListaA.insertar(third);
         ListaA.insertar(fourth);
         ListaA.insertar(fifth);
+
+
+    Listatickets<Artículos> ListaTA=new Listatickets<>();
 
 
 
@@ -35,6 +47,16 @@ public class Main {
 
 //Buscar por clave de producto, hay 10 intentos.
 
+
+
+        //Ticket<Articulos> listaT= new Ticket<>();
+        //				Elemento<Articulos> ticket1 = new Elemento<>(a2);
+        //				listaT.insertarT(ticket1);
+        //				System.out.print("Importe total de: $ " + total + " Gracias por su compra \n");
+        //				System.out.print("LISTA ACTUAL: ");
+        //				System.out.print(listaT.recorrerT());
+
+
         for (int num = 0; num <= 9; num++) {
 
             System.out.println("\n Looking for a product?" + "\n Type it here: ");
@@ -49,8 +71,15 @@ public class Main {
                     System.out.println("Number of elements required ? ");
                     variable=teclado.nextInt();
                     var=art1.getPrice();
-                    int total1=var*variable;
-                    System.out.print( "Monto $" + total1);
+                    if(variable<c1.getCantidad()){
+                        int total1 = var * variable;
+                        System.out.print("Monto $" + total1); }
+                        else {
+                        System.out.println("NO HAY DISPONIBILIDAD");                }
+
+
+
+
 
                 } else if (key.equals((art2.getKeyproduct()))) {
                     System.out.print("The product you are lookig for is: " + art2.toString() + " \n");
@@ -58,8 +87,12 @@ public class Main {
                     System.out.println("Number of elements required ? ");
                     variable=teclado.nextInt();
                     var=art2.getPrice();
-                    int total2=var*variable;
-                    System.out.print( "Monto $" + total2);
+                    if(variable<c2.getCantidad()){
+                        int total2 = var * variable;
+                        System.out.print("Monto $" + total2); }
+                    else {
+                        System.out.println("NO HAY DISPONIBILIDAD");                }
+
 
                 } else if (key.equals((art3.getKeyproduct()))) {
                     System.out.print("The product you are lookig for is: " + art3.toString() + " \n");
@@ -67,8 +100,11 @@ public class Main {
                     System.out.println("Number of elements required ? ");
                     variable=teclado.nextInt();
                     var=art3.getPrice();
-                    int total3=var*variable;
-                    System.out.print( "Monto $" + total3);
+                    if(variable<c3.getCantidad()){
+                        int total3 = var * variable;
+                        System.out.print("Monto $" + total3); }
+                    else {
+                        System.out.println("NO HAY DISPONIBILIDAD");                }
 
                 } else if (key.equals((art4.getKeyproduct()))) {
                     System.out.print("The product you are lookig for is: " + art4.toString() + " \n");
@@ -76,17 +112,22 @@ public class Main {
                     System.out.println("Number of elements required ? ");
                     variable=teclado.nextInt();
                     var=art4.getPrice();
-                    int total4=var*variable;
-                    System.out.print( "Monto $" + total4);
-
+                    if(variable<c4.getCantidad()){
+                        int total4 = var * variable;
+                        System.out.print("Monto $" + total4); }
+                    else {
+                        System.out.println("NO HAY DISPONIBILIDAD");                }
                 } else if ((key.equals((art5.getKeyproduct())))) {
                     System.out.print("The product you are lookig for is: " + art5.toString() + " \n");
                     num++; variable=art5.getPrice();
                     System.out.println("Number of elements required ? ");
                     variable=teclado.nextInt();
                     var=art5.getPrice();
-                    int total5=var*variable;
-                    System.out.print( "Monto $" + total5);
+                    if(variable<c5.getCantidad()){
+                        int total5 = var * variable;
+                        System.out.print("Monto $" + total5); }
+                    else {
+                        System.out.println("NO HAY DISPONIBILIDAD");                }
 
 
                 } }else

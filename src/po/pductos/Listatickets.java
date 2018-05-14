@@ -1,7 +1,7 @@
 package po.pductos;
 
 public class Listatickets<T> {
-    public Tickets<T> pivote, inicio;
+    Elemento<T> pivote, inicio;
     int nelementos;
 
     //Constructor inicial
@@ -11,12 +11,12 @@ public class Listatickets<T> {
     }
 
 
-    public Listatickets(Tickets<T> objeto){
+    public Listatickets(Elemento<T> objeto){
         inicio=pivote=objeto;
         nelementos=1;
     }
 
-    public void insertaren(Tickets<T> objeto){
+    public void insertaren(Elemento<T> objeto){
         if(nelementos==0){
             inicio=pivote=objeto;
         } else{
@@ -26,24 +26,21 @@ public class Listatickets<T> {
         nelementos++;
     }
 
-    public String recorrer(){
+    public String recorreren(){
         String data = "";
         pivote=inicio;
         for(int i=0; i<nelementos; i++){
-            data += pivote.attrGr.toString();
+            data += pivote.attrG.toString();
             pivote=pivote.siguiente;
         }
         return data;
     }
-    public String eliminar(){
-        String data="";
-        pivote=inicio;
-        for(int i=1;i<nelementos; i++){
-            data +=pivote.attrGr.toString();
-            pivote =pivote.siguiente;
+    public void eliminaren() {
+        inicio = inicio.siguiente;
+        nelementos--;
+        if (nelementos == 0) {
+            inicio = pivote = null;
+
         }
-        return data;
     }
-
 }
-

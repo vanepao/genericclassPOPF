@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class List <T> {
     public Elemento<T> pivote, inicio;
-    public Tickets<T> pivote2, inicio2;
 
     int nelementos;
 
@@ -26,15 +25,6 @@ public class List <T> {
         } else{
             objeto.siguiente=inicio;
             inicio=pivote=objeto;
-        }
-        nelementos++;
-    }
-    public void insertar(Tickets<T> objeto){
-        if(nelementos==0){
-            inicio2=pivote2=objeto;
-        } else{
-            objeto.siguiente=inicio2;
-            inicio2=pivote2=objeto;
         }
         nelementos++;
     }
